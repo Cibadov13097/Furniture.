@@ -1243,7 +1243,7 @@ footer {
 }
 .creative-showcase .creative-content h2 {
   font-size: 2rem;
-  color: #6d4c41;
+  color: #ffffff;
   margin-bottom: 0.5rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -1627,7 +1627,7 @@ footer {
 .offer-title {
   font-size: 1.35rem;
   font-weight: bold;
-  color: #6d4c41;
+  color: #008000;
   display: block;
   margin-bottom: 0.2rem;
   letter-spacing: 1px;
@@ -1639,7 +1639,7 @@ footer {
 }
 .offer-desc {
   font-size: 1.05rem;
-  color: #4e342e;
+  color: #008000;
   display: block;
 }
 .offer-btn {
@@ -1658,7 +1658,7 @@ footer {
 }
 .offer-btn:hover {
   background: #ffb300;
-  color: #6d4c41;
+  color: #008000;
   box-shadow: 0 4px 24px #ffb30055;
 }
 @media (max-width: 700px) {
@@ -1716,4 +1716,155 @@ footer {
     color: #ffb300;
     transform: rotate(90deg) scale(1.2);
   }
+}
+
+
+/* assets/css/style.css - Modal üçün stil əlavə edin */
+.modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.38);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: modalFadeIn 0.35s;
+}
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modal-content {
+  background: linear-gradient(120deg, #fffbe7 0%, #e0f7fa 100%);
+  padding: 2.5rem 2.2rem 2rem 2.2rem;
+  border-radius: 1.5rem;
+  min-width: 320px;
+  max-width: 95vw;
+  position: relative;
+  box-shadow: 0 8px 40px 0 rgba(140, 120, 255, 0.13), 0 2px 16px rgba(255,179,0,0.13);
+  animation: modalPop 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@keyframes modalPop {
+  0% { transform: scale(0.85) translateY(40px); opacity: 0; }
+  80% { transform: scale(1.05) translateY(-8px); opacity: 1; }
+  100% { transform: scale(1) translateY(0); }
+}
+.close {
+  position: absolute;
+  right: 1.2rem;
+  top: 1.2rem;
+  font-size: 2rem;
+  color: #e1306c;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  z-index: 2;
+}
+.close:hover {
+  color: #ffb300;
+  transform: scale(1.2) rotate(10deg);
+}
+#modalProductTitle {
+  color: #008000;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+#orderForm label {
+  display: block;
+  margin-top: 12px;
+  color: #6d4c41;
+  font-weight: 500;
+  font-size: 1.07rem;
+  letter-spacing: 0.2px;
+}
+#orderForm input,
+#orderForm textarea {
+  width: 100%;
+  margin-top: 5px;
+  padding: 0.7rem 1rem;
+  border-radius: 1rem;
+  border: 1.5px solid #e0c3fc;
+  background: #fff;
+  font-size: 1.05rem;
+  transition: border 0.2s, background 0.2s;
+  outline: none;
+  box-sizing: border-box;
+}
+#orderForm input:focus,
+#orderForm textarea:focus {
+  border: 1.5px solid #ffb300;
+  background: #fffbe7;
+}
+#orderForm button {
+  margin-top: 18px;
+  background: linear-gradient(90deg, #ffb300 0%, #008000 100%);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2.2rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #ffb30033;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  letter-spacing: 0.5px;
+}
+#orderForm button:hover {
+  background: linear-gradient(90deg, #008000 0%, #ffb300 100%);
+  color: #fff;
+  box-shadow: 0 4px 24px #ffb30055;
+}
+#orderSuccess {
+  display: none;
+  color: #008000;
+  margin-top: 16px;
+  font-size: 1.13rem;
+  font-weight: 600;
+  text-align: center;
+  background: #e0f7fa;
+  border-radius: 1rem;
+  padding: 0.7rem 1rem;
+  box-shadow: 0 2px 8px #b2dfdb44;
+}
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    min-width: 0;
+    width: 98vw;
+  }
+}
+
+/* Sifariş et butonu üçün kreativ stil */
+.order-btn {
+  margin-top: 14px;
+  background: linear-gradient(90deg, #ffb300 0%, #008000 100%);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2.1rem;
+  border-radius: 2rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #ffb30033;
+  letter-spacing: 0.5px;
+  transition: 
+    background 0.18s,
+    color 0.18s,
+    box-shadow 0.18s,
+    transform 0.18s;
+  outline: none;
+  position: relative;
+  z-index: 1;
+}
+.order-btn:hover, .order-btn:focus {
+  background: linear-gradient(90deg, #008000 0%, #ffb300 100%);
+  color: #fff;
+  box-shadow: 0 4px 24px #ffb30055;
+  transform: translateY(-2px) scale(1.04);
 }

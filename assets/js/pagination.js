@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const itemsPerPage = 6;
+  const itemsPerPage = 3;
   const furnitureGrid = document.getElementById('furnitureGrid');
   const items = Array.from(furnitureGrid.querySelectorAll('.furniture-item'));
   const pagination = document.querySelector('.pagination');
